@@ -3,6 +3,12 @@ plugins {
     id 'application'
 }
 
+jar {
+    manifest {
+        attributes('Main-Class': 'HMMR_ATAC.Main_HMMR_Driver')
+    }
+}
+
 repositories {
     flatDir {
         dirs 'ThirdPartyJARS/'
