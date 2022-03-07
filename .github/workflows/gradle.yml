@@ -22,5 +22,5 @@ jobs:
     - name: Upload the artifact
       uses: actions/upload-artifact@v3
       with:
-        name: HMMRATAC-snapshot-exec.jar
-        path: build/libs
+        name: HMMRATAC-snapshot
+        path: build/libs/HMMRATAC-snapshot-exec.jar
