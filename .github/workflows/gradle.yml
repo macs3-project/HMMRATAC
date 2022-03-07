@@ -14,9 +14,13 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew execJar
-
-    - uses: actions/upload-artifact@v1
+      run: |
+        ./gradlew compileJava
+        ./gradlew processResources
+        ./gradlew jar
+        ./gradlew execJar
+    - name: Upload the artifact
+      uses: actions/upload-artifact@v3
       with:
         name: HMMRATAC-snapshot-exec.jar
         path: build/libs
